@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using UniDecode.NET;
+using UnicodeTransliteration;
 
 namespace Tester
 {
@@ -14,7 +14,7 @@ namespace Tester
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            var input = "";
+            var input = "íóßÆ";
 
             var output = SQLFunctions.Transliterate(input);
 
@@ -22,6 +22,8 @@ namespace Tester
             Console.WriteLine($"Output: {output}");
 
             Console.WriteLine("Press any key to contine...");
+
+            Console.ReadKey();
         }
     }
 }

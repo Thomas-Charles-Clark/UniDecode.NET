@@ -48,11 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UniDecode.NET\UniDecode.NET.csproj">
+    <ProjectReference Include="..\UnicodeTransliteration\UnicodeTransliteration.csproj">
       <Project>{c4b4fb9d-fad7-4071-9c3f-80a744b68e5f}</Project>
-      <Name>UniDecode.NET</Name>
+      <Name>UnicodeTransliteration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

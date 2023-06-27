@@ -1,14 +1,6 @@
 ﻿using Microsoft.SqlServer.Server;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Unidecode.NET;
-
-namespace UniDecode.NET
+namespace UnicodeTransliteration
 {
     public static class SQLFunctions
     {
@@ -18,7 +10,12 @@ namespace UniDecode.NET
         public static string Transliterate(
             string Input)
         {
-            return Input.Unidecode();
+            if (Input == null)
+            {
+                return null;
+            }
+
+            return Decoder.Decode(Input);
         }
     }
 }
